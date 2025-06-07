@@ -24,7 +24,7 @@ async def private_receive_handler(c: Client, m: Message):
     is_allowed, remaining_time = await is_user_allowed(user_id)
     if not is_allowed:
         return await m.reply_text(
-            f"🚫 **Limit reached: You’ve already sent 4 files.**\nPlease **{remaining_time} sec**Please try again later. ",
+            f"🚫 **Limit reached: You’ve already sent 4 files.**\n\n Too many requests! Please wait **{remaining_time} Sec** and try again. ",
             quote=True
         )
 
