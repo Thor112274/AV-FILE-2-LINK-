@@ -1,7 +1,6 @@
 class script(object):
-    START_TXT = """<b>Hᴇʏ {}, </b>\n\n<i>send me a file or add me as an admin to any channel to instantly generate file links.
+    START_TXT = """<b>Hᴇʏ {}, </b>\n\nɪ ᴀᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ ꜰɪʟᴇ ᴛᴏ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ.\n\nᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ᴀɴʏ ꜰɪʟᴇ ᴀɴᴅ ᴠɪᴅᴇᴏ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ᴀɴᴅ ꜱᴛʀᴇᴀᴍᴀʙʟᴇ ʟɪɴᴋ</b>"""
 
-Add me to your channel to instantly generate links for any downloadable media. Once received, I will automatically attach appropriate buttons to the post containing the URL.</i>\n\n<blockquote><a href=https://t.me/{}?startchannel&admin=post_messages+edit_messages+delete_messages>➜ 𝖠𝖽𝖽 𝖳𝗈 𝖢𝗁𝖺𝗇𝗇𝖾𝗅</a></blockquote>"""
 
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
@@ -19,8 +18,6 @@ Add me to your channel to instantly generate links for any downloadable media. O
     
     ADMIN_CMD_TXT = """<b>
     
-Olay aman vishwakarma ne add Kiya hai 
-
 /broadcast send massage users 
 /users To get users details
 /ban user/channel id dan
@@ -56,10 +53,10 @@ Cʜᴀɴɴᴇʟ Uꜱᴀɢᴇ:
 🔞 ᴀᴅᴜʟᴛ ᴄᴏɴᴛᴇɴᴛ sᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ.
 
 📮 Hᴇʟᴘ & Sᴜᴘᴘᴏʀᴛ:
-• Uᴘᴅᴀᴛᴇꜱ: @AV_BOTz_UPDATE
-• Sᴜᴘᴘᴏʀᴛ: @AV_SUPPORT_GROUP
+• Uᴘᴅᴀᴛᴇꜱ: @MovieEntertainment4u 
+• Sᴜᴘᴘᴏʀᴛ: @Movie_Loverzz 
 
- <u><i>ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴛᴏ  <a href='https://t.me/AV_OWNER_BOT'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></u></i></b>"""
+ <u><i>ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴛᴏ  <a href='https://t.me/Mladminbot'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></u></i></b>"""
 
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
@@ -72,8 +69,8 @@ Nᴀᴍᴇ - {}"""
     ABOUT_TXT = """<b>╔═══❰ {} ❱══════❍
 ║╭━━━━━━━━━━━━━━━━━━➣
 ║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {}
-║┣⪼👦ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/AV_OWNER_BOT'>ᴀᴠ ᴄʜᴀᴛ ᴏᴡɴᴇʀ</a>
-║┣⪼❣️ᴜᴘᴅᴀᴛᴇ : <a href=https://t.me/AV_BOTz_UPDATE>ᴀᴠ ʙᴏᴛᴢ</a>
+║┣⪼👦ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/mladminbot'> ᴏᴡɴᴇʀ </a>
+║┣⪼❣️ᴜᴘᴅᴀᴛᴇ : <a href=https://t.me/Movie_loverzz>Main Channel</a>
 ║┣⪼⏲️ʙᴏᴛ ᴜᴘᴛɪᴍᴇ :- {}
 ║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : ᴋᴏʏᴇʙ 
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 
@@ -91,17 +88,15 @@ Nᴀᴍᴇ - {}"""
     CAPTION_TXT = """
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
 
-<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i><a href={}>{}</a></i>
+<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i> {} </i>
 
 <b>📦 ꜰɪʟᴇ sɪᴢᴇ :- </b> <i>{}</i>
 
-<b><u><i>Tap To Copy Link 👇</u></i></b>
+<b>🖥 Stream  : </b> {}
 
-<b>🖥 Stream  : </b> <code>{}</code>
+<b>📥 Download : </b> {}
 
-<b>📥 Download : </b> <code>{}</code>
-
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE 🤡</b>"""
+<b>🚸 𝙽ᴏᴛᴇ : 𝙼𝚊𝚗𝚊 𝙱𝚘𝚝 𝙽𝚊𝚌𝚑𝚒𝚝𝚑𝚎𝚢 𝙼𝚒 𝙵𝚛𝚒𝚎𝚗𝚍𝚜 𝙺𝚒 𝙺𝚞𝚍𝚊 𝚂𝚑𝚊𝚛𝚎 𝙲𝚑𝚎𝚢𝚊𝚗𝚍𝚒😇❤️</b>"""
 
  #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
@@ -110,15 +105,15 @@ Nᴀᴍᴇ - {}"""
     CAPTION2_TXT = """
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
 
-<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i><a href={}>{}</a></i>
+<b>📧 ꜰɪʟᴇ ɴᴀᴍᴇ :- </b> <i> {} </i>
 
 <b>📦 ꜰɪʟᴇ sɪᴢᴇ :- </b> <i>{}</i>
 
-<b><u><i>Tap To Copy Link 👇</u></i></b>
+<b>🖥 Stream  : </b> {}
 
-<b>📥 Download : </b> <code>{}</code>
+<b>📥 Download : </b> {}
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE 🤡</b>"""
+<b>🚸 𝙽ᴏᴛᴇ : 𝙼𝚊𝚗𝚊 𝙱𝚘𝚝 𝙽𝚊𝚌𝚑𝚒𝚝𝚑𝚎𝚢 𝙼𝚒 𝙵𝚛𝚒𝚎𝚗𝚍𝚜 𝙺𝚒 𝙺𝚞𝚍𝚊 𝚂𝚑𝚊𝚛𝚎 𝙲𝚑𝚎𝚢𝚊𝚗𝚍𝚒😇❤️</b>"""
     
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
