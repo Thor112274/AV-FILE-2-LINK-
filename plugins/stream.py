@@ -59,7 +59,7 @@ async def private_receive_handler(c: Client, m: Message):
 
         # ✅ Reply to User
         caption = script.CAPTION_TXT.format(CHANNEL, file_name, file_size, stream, download) \
-            if file_name else script.CAPTION2_TXT.format(CHANNEL, file_name, file_size, stream, download)
+            if file_name else script.CAPTION2_TXT.format(CHANNEL, file_name, file_size, download)
 
         buttons = [
             [InlineKeyboardButton(" Stream ", url=stream),
