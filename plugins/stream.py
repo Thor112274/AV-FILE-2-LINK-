@@ -66,7 +66,7 @@ async def private_receive_handler(c: Client, m: Message):
              InlineKeyboardButton(" Download ", url=download)],
            # [InlineKeyboardButton("Get File", url=file_link),
              #InlineKeyboardButton("Share", url=share_link),
-             InlineKeyboardButton("❌ Close", callback_data='close_data')]
+            [InlineKeyboardButton("❌ Close", callback_data='close_data')]
         ]
 
         await m.reply_text(
