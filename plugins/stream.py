@@ -24,7 +24,7 @@ async def private_receive_handler(c: Client, m: Message):
     is_allowed, remaining_time = await is_user_allowed(user_id)
     if not is_allowed:
         return await m.reply_text(
-            f"🚫 **आप 10 फाइल पहले ही भेज चुके हैं!**\nकृपया **{remaining_time} सेकंड** बाद फिर से प्रयास करें।",
+            f"🚫 **"Limit reached: You’ve already sent 4 files.**\nPlease **{remaining_time} sec**Please try again later. ",
             quote=True
         )
 
@@ -59,7 +59,7 @@ async def private_receive_handler(c: Client, m: Message):
 
         # ✅ Reply to User
         caption = script.CAPTION_TXT.format(CHANNEL, file_name, file_size, stream, download) \
-            if file_name else script.CAPTION2_TXT.format(CHANNEL, file_name, file_size, download)
+            if file_name else script.CAPTION_TXT.format(CHANNEL, file_name, file_size, download)
 
         buttons = [
             [InlineKeyboardButton(" Stream ", url=stream),
