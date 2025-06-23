@@ -53,7 +53,6 @@ async def render_page(id, secure_hash, src=None):
     return template.render(
         file_name=file_data.file_name.replace("_", " "),
         file_url=src,
-        file_size=humanbytes(file_data.file_size),
         file_unique_id=file_data.unique_id,
         mime_type=file_data.mime_type,  # ✅ required for intent links
         tg_button=tg_button,
