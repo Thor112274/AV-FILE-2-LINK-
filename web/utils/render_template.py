@@ -43,7 +43,7 @@ async def render_page(id, secure_hash, src=None):
     # ✅ Load Jinja2 environment
     template_loader = jinja2.FileSystemLoader(searchpath=str(template_path))
     template_env = jinja2.Environment(loader=template_loader)
-    template = template_env.get_template(template_name)
+    template = template_env.get_template(Path(template_file).name)
 
     file_name = file_data.file_name.replace("_", " ")
 
