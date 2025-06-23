@@ -13,6 +13,20 @@ from Template import jisshu_template
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
 # For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
+# render.py
+
+def humanbytes(size):
+    """Convert bytes to human-readable format (e.g. KB, MB, GB)."""
+    power = 2**10
+    n = 0
+    power_labels = {0: '', 1: 'KB', 2: 'MB', 3: 'GB', 4: 'TB'}
+    while size > power and n < 4:
+        size /= power
+        n += 1
+    return f"{round(size, 2)} {power_labels[n]}"
+
+# ...rest of your render.py logic that uses humanbytes()
+
 
 async def render_page(id, secure_hash, src=None):
     file = await Webavbot.get_messages(int(BIN_CHANNEL), int(id))
