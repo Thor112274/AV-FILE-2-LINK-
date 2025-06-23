@@ -85,17 +85,36 @@
           <a href="{{jisshu_report_link}}" class="report">Report</a>
         </div>
       </div>
+    </main>
   </div>
-  </main>
-  <!-- Footer is now generated via JavaScript -->
-  </div>
-  
+
   <!-- External JS -->
   <script src="https://developer-six-dusky.vercel.app/548/551/play.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       console.log("JS Loaded Successfully");
     });
+
+    function mx_player() {
+      const url = "{{file_url}}";
+      const intentUrl = `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=Video;end;`;
+      console.log("Opening MX Player:", intentUrl);
+      window.location.href = intentUrl;
+    }
+
+    function vlc_player() {
+      const url = "{{file_url}}";
+      const vlcUrl = `vlc://${url}`;
+      console.log("Opening VLC Player:", vlcUrl);
+      window.location.href = vlcUrl;
+    }
+
+    function playit_player() {
+      const url = "{{file_url}}";
+      const intentUrl = `intent:${url}#Intent;package=com.playit.videoplayer;S.title=Video;end;`;
+      console.log("Opening Play It:", intentUrl);
+      window.location.href = intentUrl;
+    }
   </script>
 </body>
 
