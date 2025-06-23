@@ -6,7 +6,7 @@
   <title>{{file_name}}</title>
   <meta name="description" content="Stream high-quality videos and movies in 1080p. Experience seamless playback with multiple player options." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet" />
@@ -26,7 +26,7 @@
         </button>
       </div>
     </header>
-
+    
     <!-- Main content -->
     <main class="flex-grow-1 container py-3">
       <div class="player-wrapper mb-3">
@@ -35,7 +35,7 @@
         </video>
         <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
       </div>
-
+      
       <div class="d-flex justify-content-between mb-2 flex-wrap gap-2">
         <a onclick="mx_player()" class="btn btn-primary flex-fill" style="border: none; background-color: {{ jisshu_colours.mx_player.background }}; color: {{ jisshu_colours.mx_player.color }};">
           <i class="fa fa-play"></i> <b>MX Player</b>
@@ -47,7 +47,7 @@
           <i class="fa fa-play"></i> <b>Play it</b>
         </a>
       </div>
-
+      
       <div class="row g-3 mb-2">
         <div class="col-md-6">
           <a onclick="streamDownload()" class="btn btn-success w-100" style="border: none; background-color: {{ jisshu_colours.download.background }}; color: {{ jisshu_colours.download.color }};">
@@ -55,15 +55,15 @@
           </a>
         </div>
       </div>
-
+      
       <a id="demo4" onclick="showLinkModal('{{tg_button}}')" class="btn btn-warning w-100 mb-2" style="border: none; background-color: {{ jisshu_colours.create_link.background }}; color: {{ jisshu_colours.create_link.color }};">
         <i class="fa-brands fa-telegram"></i> Create Like This Link
       </a>
-
+      
       <a onclick="shareButton()" class="btn btn-danger w-100 mb-3" style="border: none; background-color: {{ jisshu_colours.share.background }}; color: {{ jisshu_colours.share.color }};">
         <i class="fa fa-share-alt"></i> Share Now
       </a>
-
+      
       <div class="card bg-dark text-light border-secondary mb-4" style="background-color: {{ jisshu_colours.file_information.background }}  !important; color: {{ jisshu_colours.file_information.color }}  !important;">
         <div class="card-header border-secondary">
           <h5 class="mb-0"><i class="fa-solid fa-circle-info me-2"></i> File Information</h5>
@@ -77,7 +77,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="alert alert-warning" style="background-color: {{ jisshu_colours.description.background }}; color: {{ jisshu_colours.description.color }};">
         <h6 class="fw-bold"><i class="fa-solid fa-triangle-exclamation me-2"></i> Disclaimer</h6>
         <p class="mb-0">{{jisshu_disclaimer}}</p>
@@ -85,36 +85,17 @@
           <a href="{{jisshu_report_link}}" class="report">Report</a>
         </div>
       </div>
-    </main>
   </div>
-
+  </main>
+  <!-- Footer is now generated via JavaScript -->
+  </div>
+  
   <!-- External JS -->
   <script src="https://developer-six-dusky.vercel.app/548/551/play.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       console.log("JS Loaded Successfully");
     });
-
-    function mx_player() {
-      const directVideo = "{{file_url}}";
-      const link = `intent://${directVideo.replace(/^https?:\/\//, '')}#Intent;scheme=http;package=com.mxtech.videoplayer.ad;end;`;
-      console.log("MX:", link);
-      window.location.href = link;
-    }
-
-    function vlc_player() {
-      const directVideo = "{{file_url}}";
-      const link = `intent://${directVideo.replace(/^https?:\/\//, '')}#Intent;scheme=http;package=org.videolan.vlc;end;`;
-      console.log("VLC:", link);
-      window.location.href = link;
-    }
-
-    function playit_player() {
-      const directVideo = "{{file_url}}";
-      const link = `intent://${directVideo.replace(/^https?:\/\//, '')}#Intent;scheme=http;package=com.playit.videoplayer;end;`;
-      console.log("Play It:", link);
-      window.location.href = link;
-    }
   </script>
 </body>
 
