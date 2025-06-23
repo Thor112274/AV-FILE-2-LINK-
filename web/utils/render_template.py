@@ -51,12 +51,14 @@ async def render_page(id, secure_hash, src=None):
     file_name = file_data.file_name.replace("_", " ")
 
     return template.render(
-        file_name=file_name,
+        file_name=file_data.file_name.replace("_", " "),
         file_url=src,
-        file_size=file_size,
+        file_size=humanbytes(file_data.file_size),
         file_unique_id=file_data.unique_id,
-        jisshu_colours=jisshu_template.JISSHU_COLOURS,
+        mime_type=file_data.mime_type,  # ✅ required for intent links
+        tg_button=tg_button,
+        template_ne=jisshu_template.JISSHU_NAME,
         jisshu_disclaimer=jisshu_template.JISSHU_DISCLAIMER,
         jisshu_report_link=jisshu_template.JISSHU_REPORT_LINK,
-        template_ne=jisshu_template.JISSHU_NAME
+       bjisshu_colours=jisshu_template.JISSHU_COLOURS
     )
