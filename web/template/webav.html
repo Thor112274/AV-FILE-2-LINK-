@@ -41,24 +41,24 @@
       <div class="d-flex justify-content-between mb-2 flex-wrap gap-2">
 
         <!-- MX Player -->
-        <a href="mxplayer://play?url={{file_url}}" 
+        <a href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=com.mxtech.videoplayer.ad;type=video/mp4;end"
            class="btn btn-primary flex-fill"
            style="border: none; background-color: {{ jisshu_colours.mx_player.background }}; color: {{ jisshu_colours.mx_player.color }};">
           <i class="fa fa-play"></i> <b>MX Player</b>
         </a>
 
         <!-- VLC Player -->
-        <a href="vlc://{{file_url}}" 
+        <a href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=org.videolan.vlc;type=video/mp4;end"
            class="btn btn-primary flex-fill"
            style="border: none; background-color: {{ jisshu_colours.vlc_player.background }}; color: {{ jisshu_colours.vlc_player.color }};">
           <i class="fa fa-play"></i> <b>VLC Player</b>
         </a>
 
         <!-- Playit Player -->
-        <a href="intent://play?url={{file_url}}#Intent;scheme=playit;package=com.playit.videoplayer;end" 
+        <a href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=com.playit.videoplayer;type=video/mp4;end"
            class="btn btn-primary flex-fill"
            style="border: none; background-color: {{ jisshu_colours.playit_player.background }}; color: {{ jisshu_colours.playit_player.color }};">
-          <i class="fa fa-play"></i> <b>Play it</b>
+          <i class="fa fa-play"></i> <b>Playit</b>
         </a>
 
       </div>
