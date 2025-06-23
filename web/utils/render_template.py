@@ -59,5 +59,5 @@ async def render_page(id, secure_hash, src=None):
         template_ne=jisshu_template.JISSHU_NAME,
         jisshu_disclaimer=jisshu_template.JISSHU_DISCLAIMER,
         jisshu_report_link=jisshu_template.JISSHU_REPORT_LINK,
-       bjisshu_colours=jisshu_template.JISSHU_COLOURS
+        jisshu_colours=jisshu_template.JISSHU_COLOURS
     )
