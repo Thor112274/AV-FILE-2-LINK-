@@ -37,6 +37,14 @@ async def render_page(id, secure_hash, src=None):
     with open(template_file) as f:
         template = jinja2.Template(f.read())
 
+    BASE_DIR = Path(__file__).resolve().parent.parent  # Goes from /util → /Deendayal_botz
+    template_path = BASE_DIR / "template"
+
+    # ✅ Load Jinja2 environment
+    template_loader = jinja2.FileSystemLoader(searchpath=str(template_path))
+    template_env = jinja2.Environment(loader=template_loader)
+    template = template_env.get_template(template_name)
+
     file_name = file_data.file_name.replace("_", " ")
 
     return template.render(
