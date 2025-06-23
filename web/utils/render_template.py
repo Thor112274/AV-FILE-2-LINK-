@@ -10,23 +10,6 @@ import aiohttp
 from pathlib import Path
 from Template import jisshu_template
 
-#Dont Remove My Credit @AV_BOTz_UPDATE 
-#This Repo Is By @BOT_OWNER26 
-# For Any Kind Of Error Ask Us In Support Group @AV_SUPPORT_GROUP
-# render.py
-
-def humanbytes(size):
-    """Convert bytes to human-readable format (e.g. KB, MB, GB)."""
-    power = 2**10
-    n = 0
-    power_labels = {0: '', 1: 'KB', 2: 'MB', 3: 'GB', 4: 'TB'}
-    while size > power and n < 4:
-        size /= power
-        n += 1
-    return f"{round(size, 2)} {power_labels[n]}"
-
-# ...rest of your render.py logic that uses humanbytes()
-
 
 async def render_page(id, secure_hash, src=None):
     file = await Webavbot.get_messages(int(BIN_CHANNEL), int(id))
@@ -42,28 +25,20 @@ async def render_page(id, secure_hash, src=None):
     )
 
     tag = file_data.mime_type.split("/")[0].strip()
-    file_size = humanbytes(file_data.file_size)
-
+    file_size = get_size(file_data.file_size)
     if tag in ["video", "audio"]:
-        template_name = "webav.html"
+        template_file = "web/template/webav.html"
     else:
-        template_name = "dl.html"
+        template_file = "web/template/dl.html"
         async with aiohttp.ClientSession() as s:
             async with s.get(src) as u:
-                file_size = humanbytes(int(u.headers.get("Content-Length")))
+                file_size = get_size(int(u.headers.get("Content-Length")))
 
-    # ✅ Use Pathlib to get the correct /template folder
-    BASE_DIR = Path(__file__).resolve().parent.parent  # Goes from /util → /Deendayal_botz
-    template_path = BASE_DIR / "template"
-
-    # ✅ Load Jinja2 environment
-    template_loader = jinja2.FileSystemLoader(searchpath=str(template_path))
-    template_env = jinja2.Environment(loader=template_loader)
-    template = template_env.get_template(template_name)
+    with open(template_file) as f:
+        template = jinja2.Template(f.read())
 
     file_name = file_data.file_name.replace("_", " ")
 
-    # ✅ Render HTML with all variables
     return template.render(
         file_name=file_name,
         file_url=src,
