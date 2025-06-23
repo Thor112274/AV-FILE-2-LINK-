@@ -45,7 +45,7 @@ async def render_page(id, secure_hash, src=None):
     file_size = humanbytes(file_data.file_size)
 
     if tag in ["video", "audio"]:
-        template_name = "req.html"
+        template_name = "webav.html"
     else:
         template_name = "dl.html"
         async with aiohttp.ClientSession() as s:
