@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/style.css">
 </head>
 
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE -->
-    
 <body>
     <div class="container">
         <header>
@@ -24,15 +22,13 @@
         </header>
         <div class="player-container">
             <div class="video-wrapper">
-                <video class="plyr" controls poster="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/well.png" alt="Video Player Poster Image">
-                    <source src="{{file_url}}" type="video/mp4" alt="Video Source">
+                <video class="plyr" controls poster="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/well.png">
+                    <source src="{{file_url}}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
 
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE-->
-        
         <div class="controls">
             <button class="btn download" onclick="download()">
                 <i class="fas fa-cloud-download-alt"></i> Download
@@ -41,6 +37,7 @@
                 <i class="fas fa-link"></i> Copy Link
             </button>
         </div> 
+
         <div class="container">
             <button class="btn download" onclick="playOnline('vlc')">
                 <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/vlc.png" alt="VLC Mobile" class="player-logo"> VLC Mobile
@@ -59,20 +56,20 @@
             </button>
         </div>
 
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE-->
-        
         <div class="container">
             <header>
-                <a href="http://youtube.com/@avbotx"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/youtube.png" class="player-logo"></a>
-                <a href="http://GitHub.com/Botsthe"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/github.png" class="player-logo"></a>
-                <a href="http://t.me/BOT_OWNER26"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/telegram.png" class="player-logo"></a>
-                <a href="https://www.instagram.com/aman_developerr"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/instagram.png" class="player-logo"></a>
+                <!--<a href="http://youtube.com/@avbotx"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/youtube.png" class="player-logo"></a>
+                <a href="http://GitHub.com/Botsthe"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/github.png" class="player-logo"></a>-->
+                <a href="http://t.me/mladminbot"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/telegram.png" class="player-logo"></a>
+                <a href="https://www.instagram.com/khatarnak_cinemalu"> <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/instagram.png" class="player-logo"></a>
             </header>
         </div>
+
+        <a href="{{file_url}}" download style="color:blue;display:block;text-align:center;margin-top:15px;">
+            📥 Long press here if app not opening
+        </a>
     </div>
 
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE-->
-    
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -83,18 +80,22 @@
         const currentUrl = window.location.href;
         const finalUrl = currentUrl.replace("/watch/", "/dl/");
 
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE-->
-        
         function playOnline(player) {
+            const encodedUrl = encodeURIComponent(finalUrl);
             const playerUrls = {
                 vlc: `vlc://${finalUrl}`,
-                mxp: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.pro;end`,
-                mx: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.ad;end`,
+                mx: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title=${encodeURIComponent("AV Botz Player")};end`,
+                mxp: `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.pro;S.title=${encodeURIComponent("AV Botz Player")};end`,
                 np: `nplayer-${finalUrl}`,
                 sp: `intent:${finalUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`,
                 km: `intent:${finalUrl}#Intent;package=com.kmplayer;end`
             };
-            window.location.href = playerUrls[player] || finalUrl;
+            const url = playerUrls[player];
+            if (url) {
+                window.location.href = url;
+            } else {
+                alert("Unsupported player selected.");
+            }
         }
 
         function download() {
@@ -115,6 +116,4 @@
         }
     </script>
 </body>
-</html
-
-<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE-->
+</html>
