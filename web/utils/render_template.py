@@ -3,6 +3,7 @@ import urllib.parse
 import logging
 import aiohttp
 from pathlib import Path
+from Template import jisshu_template 
 
 from info import *
 from web.server import Webavbot
@@ -53,5 +54,9 @@ async def render_page(id, secure_hash, src=None):
         file_name=file_name,
         file_url=src,
         file_size=file_size,
-        file_unique_id=file_data.unique_id
+        file_unique_id=file_data.unique_id,
+        jisshu_colours=jisshu_template.JISSHU_COLOURS,
+        jisshu_disclaimer=jisshu_template.JISSHU_DISCLAIMER,
+        jisshu_report_link=jisshu_template.JISSHU_REPORT_LINK,
+        template_ne=jisshu_template.JISSHU_NAME
     )
