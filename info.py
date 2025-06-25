@@ -15,8 +15,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 BOT_USERNAME = environ.get("BOT_USERNAME", 'mlfiletolinkbot') # without @ 
 
 # Admins, Channels & Users
-BIN_CHANNEL = int(environ.get("BIN_CHANNEL", '-1002005906539')) # admin your channel in stream 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", '-1002005906539')) # admin your channel in users log 
+BIN_CHANNEL = int(environ.get("BIN_CHANNEL", '-1002858307046')) # admin your channel in stream 
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", '-1002858307046')) # admin your channel in users log 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '949657126').split()] # 3567788, 678899, 5889467
 OWNER_USERNAME = environ.get("OWNER_USERNAME", 'mladminbot') # without @ 
 
@@ -34,7 +34,7 @@ SUPPORT = environ.get('SUPPORT', 'https://t.me/Movie_loverzz')
 # file limit information
 ENABLE_LIMIT = environ.get("ENABLE_LIMIT", True) # True and False
 RATE_LIMIT_TIMEOUT = int(environ.get("RATE_LIMIT_TIMEOUT", "300"))  # limit time 600 = 10 minutes 
-MAX_FILES = int(environ.get("MAX_FILES", "4"))  # file limit 10 file Olay
+MAX_FILES = int(environ.get("MAX_FILES", "5"))  # file limit 10 file Olay
 
 # short Link  information
 SHORTLINK = environ.get('SHORTLINK', False) # True and False
@@ -82,12 +82,12 @@ if 'DYNO' in environ:
     APP_NAME = str(getenv('APP_NAME')) #dont need to fill anything here
 else:
     ON_HEROKU = False
-FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', 'https://a-loki-bot2-b9b930b68654.herokuapp.com/') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', 'https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/') else APP_NAME+'.herokuapp.com'
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://a-loki-bot2-b9b930b68654.herokuapp.com/".format(FQDN)
+    URL = "https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://a-loki-bot2-b9b930b68654.herokuapp.com/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
+    URL = "https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
       
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
