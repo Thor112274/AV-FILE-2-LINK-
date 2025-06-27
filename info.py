@@ -85,9 +85,9 @@ else:
 FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', 'https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/') else APP_NAME+'.herokuapp.com'
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/".format(FQDN)
+    URL = "https://movie-loverz-bot-46d5eb598fac.herokuapp.com/".format(FQDN)
 else:
-    URL = "https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
+    URL = "https://movie-loverz-bot-46d5eb598fac.herokuapp.com/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
       
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
