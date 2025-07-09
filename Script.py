@@ -53,10 +53,10 @@ Cʜᴀɴɴᴇʟ Uꜱᴀɢᴇ:
 🔞 ᴀᴅᴜʟᴛ ᴄᴏɴᴛᴇɴᴛ sᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ.
 
 📮 Hᴇʟᴘ & Sᴜᴘᴘᴏʀᴛ:
-• Uᴘᴅᴀᴛᴇꜱ: @MovieEntertainment4u 
-• Sᴜᴘᴘᴏʀᴛ: @Movie_Loverzz 
+• Uᴘᴅᴀᴛᴇꜱ: @TelexOriginals
+• Sᴜᴘᴘᴏʀᴛ: @TelexOriginals 
 
- <u><i>ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴛᴏ  <a href='https://t.me/Mladminbot'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></u></i></b>"""
+ <u><i>ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴛᴏ  <a href='https://t.me/Spidey_Professor'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></u></i></b>"""
 
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
@@ -69,8 +69,8 @@ Nᴀᴍᴇ - {}"""
     ABOUT_TXT = """<b>╔═══❰ {} ❱══════❍
 ║╭━━━━━━━━━━━━━━━━━━➣
 ║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {}
-║┣⪼👦ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/mladminbot'> ᴏᴡɴᴇʀ </a>
-║┣⪼❣️ᴜᴘᴅᴀᴛᴇ : <a href=https://t.me/Movie_loverzz>Main Channel</a>
+║┣⪼👦ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/Spidey_Professor'> ᴏᴡɴᴇʀ </a>
+║┣⪼❣️ᴜᴘᴅᴀᴛᴇ : <a href=https://t.me/TelexOriginals>Main Channel</a>
 ║┣⪼⏲️ʙᴏᴛ ᴜᴘᴛɪᴍᴇ :- {}
 ║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : ᴋᴏʏᴇʙ 
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 
