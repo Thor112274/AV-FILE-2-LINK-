@@ -1,5 +1,4 @@
 <!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,20 +39,21 @@
         </div>
 
         <div class="container">
-            <!-- VLC Button -->
-            <a class="magnet" href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=org.videolan.vlc;end">
+            <!-- ✅ Fixed VLC Button -->
+            <a class="magnet" href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=org.videolan.vlc;action=android.intent.action.VIEW;end">
                 <button class="btn download">
                     <img src="https://i.postimg.cc/15TQ4y7B/vlc.png" alt="VLC" class="player-logo"> VLC Mobile
                 </button>
             </a>
 
-            <!-- MX Player Button -->
-            <a class="magnet" href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=com.mxtech.videoplayer.ad;end">
+            <!-- ✅ Fixed MX Player Button -->
+            <a class="magnet" href="intent://{{ file_url | replace('https://', '') }}#Intent;scheme=https;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;end">
                 <button class="btn copy-link">
                     <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/mx.png" alt="MX Player" class="player-logo"> MX Player
                 </button>
             </a>
 
+            <!-- nPlayer, S Player, KM Player -->
             <button class="btn download" onclick="playOnline('np')">
                 <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/nPlayer.webp" alt="nPlayer" class="player-logo"> nPlayer
             </button>
@@ -69,10 +69,7 @@
 
         <div class="container">
             <header>
-                <!--<a href="http://youtube.com/@avbotx"><img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/youtube.png" class="player-logo"></a>
-                <a href="http://GitHub.com/Botsthe"><img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/github.png" class="player-logo"></a>-->
                 <a href="http://t.me/Spidey_Professor"><img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/telegram.png" class="player-logo"></a>
-               <!-- <a href="https://www.instagram.com/aman_developerr"><img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/instagram.png" class="player-logo"></a>-->
             </header>
         </div>
     </div>
