@@ -48,7 +48,7 @@ SHORTLINK_API = environ.get('SHORTLINK_API', '63558804ef8ee5aa3522375d7e5762c0d4
 # ban information
 BANNED_CHANNELS = [int(banned_channels) if id_pattern.search(banned_channels) else banned_channels for banned_channels in environ.get('BANNED_CHANNELS', '').split()]   
 BAN_CHNL = [int(ban_chal) if id_pattern.search(ban_chal) else ban_chal for ban_chal in environ.get('BAN_CHNL', '').split()]
-BAN_ALERT = environ.get('BAN_ALERT' , '<b>ʏᴏᴜʀ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.ᴄᴏɴᴛᴀᴄᴛ [ ᴄʜᴀᴛ ᴏᴡɴᴇʀ](https://telegram.me/Mladminbot) ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇ!!</b>')
+BAN_ALERT = environ.get('BAN_ALERT' , '<b>ʏᴏᴜʀ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ.ᴄᴏɴᴛᴀᴄᴛ [ ᴄʜᴀᴛ ᴏᴡɴᴇʀ](https://telegram.me/Spidey_Professor) ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇ!!</b>')
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://tgarun163:qgq7VlZ1a4Ke9Dnh@cluster0.7iaqu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -82,12 +82,12 @@ if 'DYNO' in environ:
     APP_NAME = str(getenv('APP_NAME')) #dont need to fill anything here
 else:
     ON_HEROKU = False
-FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', 'https://movie-loverz-bot-c65b1c89a85a.herokuapp.com/') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADDRESS)) if not ON_HEROKU or getenv('FQDN', 'https://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/') else APP_NAME+'.herokuapp.com'
 HAS_SSL=bool(getenv('HAS_SSL',False))
 if HAS_SSL:
-    URL = "https://movie-loverz-bot-46d5eb598fac.herokuapp.com/".format(FQDN)
+    URL = "https://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/".format(FQDN)
 else:
-    URL = "https://movie-loverz-bot-46d5eb598fac.herokuapp.com/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
+    URL = "https://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/".format(FQDN, "" if NO_PORT else ":" + str(PORT))
       
 #Dont Remove My Credit @AV_BOTz_UPDATE 
 #This Repo Is By @BOT_OWNER26 
