@@ -1,115 +1,126 @@
+<!-- this code is modified @BOT_OWNER26 tg :- @AV_BOTz_UPDATE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TelexOriginals | Sample Video</title>
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #121212;
-      color: #eee;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    video {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 15px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn img.player-logo {
-      width: 22px;
-      height: 22px;
-      margin-right: 8px;
-    }
-
-    .btn.download {
-      background-color: #28a745;
-      color: white;
-    }
-
-    .btn.copy-link {
-      background-color: #007bff;
-      color: white;
-    }
-
-    .warning {
-      color: #ffc107;
-      margin: 20px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/live.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TelexOriginals | {{file_name}}</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/style.css">
 </head>
+
 <body>
+    <div class="container">
+        <header>
+            <h1 id="file-name">{{file_name}}</h1>
+        </header>
 
-  <h1>Sample Video</h1>
+        <div class="player-container">
+            <div class="video-wrapper">
+                <video class="plyr" controls poster="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/well.png">
+                    <source src="{{file_url}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
 
-  <!-- ✅ Video Player -->
-  <video class="plyr" controls poster="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/well.png">
-    <source src="https://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/watch/2211?hash=AgAD1R" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+        <div class="controls">
+            <button class="btn download" onclick="download()">
+                <i class="fas fa-cloud-download-alt"></i> Download
+            </button>
+            <button class="btn copy-link" onclick="copyLink()">
+                <i class="fas fa-link"></i> Copy Link
+            </button>
+        </div>
 
-  <!-- ✅ MX Player Button (intent format) -->
-  <a class="btn copy-link" href="intent://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/watch/2211?hash=AgAD1R#Intent;scheme=https;type=video/mp4;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;end">
-    <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/mx.png" class="player-logo"> Open in MX Player
-  </a>
+        <div class="container">
+            <!-- ✅ VLC Button using vlc:// scheme -->
+            <a class="magnet" href="vlc://{{file_url}}">
+                <button class="btn download">
+                    <img src="https://i.postimg.cc/15TQ4y7B/vlc.png" alt="VLC" class="player-logo"> VLC Mobile
+                </button>
+            </a>
 
-  <!-- ❌ VLC fallback only -->
-  <p class="warning">
-    ⚠️ VLC can't be opened directly from browser. Use the button below to copy the VLC link manually.
-  </p>
-  <button class="btn download" onclick="copyVlcLink()">
-    <img src="https://i.postimg.cc/15TQ4y7B/vlc.png" class="player-logo"> Copy VLC Link
-  </button>
+            <!-- ✅ MX Player Button using intent with type -->
+            <a class="magnet" href="intent:{{file_url}}#Intent;type=video/mp4;package=com.mxtech.videoplayer.ad;action=android.intent.action.VIEW;end">
+                <button class="btn copy-link">
+                    <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/mx.png" alt="MX Player" class="player-logo"> MX Player
+                </button>
+            </a>
 
-  <!-- ✅ Download and Copy -->
-  <button class="btn download" onclick="download()">⬇️ Download</button>
-  <button class="btn copy-link" onclick="copyLink()">🔗 Copy Link</button>
+            <!-- nPlayer, S Player, KM Player -->
+            <button class="btn download" onclick="playOnline('np')">
+                <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/nPlayer.webp" alt="nPlayer" class="player-logo"> nPlayer
+            </button>
 
-  <!-- JS Includes -->
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script>
-    const fileUrl = "https://thoughtful-shayne-mlfiles-5730e5e6.koyeb.app/watch/2211?hash=AgAD1R";
+            <button class="btn download" onclick="playOnline('sp')">
+                <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/splayer.webp" alt="S Player" class="player-logo"> S Player
+            </button>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      new Plyr(document.querySelector('.plyr'));
-    });
+            <button class="btn download" onclick="playOnline('km')">
+                <img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/km.webp" alt="KM Player" class="player-logo"> KM Player
+            </button>
+        </div>
 
-    function copyLink() {
-      navigator.clipboard.writeText(fileUrl)
-        .then(() => alert("✅ Link copied to clipboard!"))
-        .catch(() => alert("❌ Failed to copy."));
-    }
+        <div class="container">
+            <header>
+                <a href="http://t.me/Spidey_Professor"><img src="https://cdn.jsdelivr.net/gh/Botsthe/DATABASE@main/image/telegram.png" class="player-logo"></a>
+            </header>
+        </div>
+    </div>
 
-    function copyVlcLink() {
-      const vlcUrl = "vlc://" + fileUrl;
-      navigator.clipboard.writeText(vlcUrl)
-        .then(() => alert("✅ VLC link copied. Open VLC and paste it."))
-        .catch(() => alert("❌ Could not copy VLC link."));
-    }
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElement = document.querySelector('.plyr');
+            new Plyr(videoElement);
+        });
 
-    function download() {
-      window.location.href = fileUrl;
-    }
-  </script>
+        const currentUrl = window.location.href;
+        const finalUrl = currentUrl.replace("/watch/", "/dl/");
 
+        function playOnline(player) {
+            const fileUrl = finalUrl;
+            let intentUrl = "";
+
+            switch (player) {
+                case "np":
+                    intentUrl = `nplayer-${fileUrl}`;
+                    break;
+                case "sp":
+                    intentUrl = `intent:${fileUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
+                    break;
+                case "km":
+                    intentUrl = `intent:${fileUrl}#Intent;package=com.kmplayer;end`;
+                    break;
+                default:
+                    intentUrl = fileUrl;
+            }
+
+            window.location.href = intentUrl;
+        }
+
+        function download() {
+            window.location.href = finalUrl;
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(finalUrl)
+                .then(() => {
+                    const feedback = document.createElement('div');
+                    feedback.className = 'feedback';
+                    feedback.textContent = "📋 Link copied to clipboard!";
+                    feedback.setAttribute("role", "alert");
+                    document.body.appendChild(feedback);
+                    setTimeout(() => feedback.remove(), 3000);
+                })
+                .catch(err => console.error('Could not copy text: ', err));
+        }
+    </script>
 </body>
 </html>
